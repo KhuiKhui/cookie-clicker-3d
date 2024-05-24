@@ -13,6 +13,7 @@ export default function Home() {
       </b>
       <br></br>
       <UI cookies={cookies} setCookies={setCookies}></UI>
+
       <Cookie cookies={cookies} setCookies={setCookies}></Cookie>
     </div>
   );
