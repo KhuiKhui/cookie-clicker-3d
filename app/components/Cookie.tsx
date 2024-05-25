@@ -1,9 +1,13 @@
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import * as THREE from "three";
 
 import { useRef } from "react";
 
-import { useGLTF } from "@react-three/drei";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Suspense } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { a } from "@react-spring/three";
 
 const Cookie = (props: { cookies: number; setCookies: Function }) => {
   {
@@ -14,9 +18,24 @@ const Cookie = (props: { cookies: number; setCookies: Function }) => {
 
     const { nodes, materials } = useGLTF("/3d/cookie.glb"); //WHY DID NO ONE TELL ME IT HAD TO BE THE PUBLIC FOLDER
     return (
-      <Canvas camera={{ position: [0, 0, 10] }}>
+      <Canvas
+        camera={{ position: [0, 0, 10] }}
+        id="cookie"
+        className="fixed cursor-pointer"
+      >
         <Suspense fallback={null}>
-          <group onClick={handleClick} dispose={null}>
+          <directionalLight />
+          <ambientLight />
+          <pointLight />
+          {/* <spotLight /> */}
+          <hemisphereLight />
+          <OrbitControls enablePan={false} enableZoom={false} />
+          <a.group
+            onClick={handleClick}
+            dispose={null}
+            rotation={[8.5, 1.5, 5]}
+            position={[0, 0, 0]}
+          >
             <mesh
               geometry={nodes.Sphere.geometry}
               material={materials["Material.001"]}
@@ -79,7 +98,7 @@ const Cookie = (props: { cookies: number; setCookies: Function }) => {
               rotation={[1.004, -1.524, 1.052]}
               scale={[0.301, 0.16, 0.283]}
             />
-          </group>
+          </a.group>
         </Suspense>
       </Canvas>
     );
