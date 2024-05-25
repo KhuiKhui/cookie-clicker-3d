@@ -39,6 +39,7 @@ export default function Cookie(props: {
           position={[0, 0, 0]}
         >
           <mesh
+            //@ts-ignore
             geometry={nodes.Sphere.geometry}
             material={materials["Material.001"]}
             position={[-0.443, -0.016, 0.124]}
@@ -46,12 +47,14 @@ export default function Cookie(props: {
             scale={[-3.892, -0.549, -3.892]}
           />
           <mesh
+            //@ts-ignore
             geometry={nodes.Icosphere.geometry}
             material={materials["Material.002"]}
             position={[-2.559, 0.292, 1.217]}
             scale={[0.689, 0.273, 0.689]}
           />
           <mesh
+            //@ts-ignore
             geometry={nodes.Icosphere001.geometry}
             material={materials["Material.002"]}
             position={[-0.61, 0.384, -1.725]}
@@ -59,6 +62,7 @@ export default function Cookie(props: {
             scale={[1.344, 0.533, 1.344]}
           />
           <mesh
+            //@ts-ignore
             geometry={nodes.Icosphere002.geometry}
             material={materials["Material.002"]}
             position={[-0.327, 0.274, 0.499]}
@@ -66,6 +70,7 @@ export default function Cookie(props: {
             scale={[0.9, 0.357, 0.9]}
           />
           <mesh
+            //@ts-ignore
             geometry={nodes.Icosphere003.geometry}
             material={materials["Material.002"]}
             position={[-0.991, 0.37, 2.156]}
@@ -73,6 +78,7 @@ export default function Cookie(props: {
             scale={[0.403, 0.16, 0.403]}
           />
           <mesh
+            //@ts-ignore
             geometry={nodes.Icosphere004.geometry}
             material={materials["Material.004"]}
             position={[-0.175, -0.206, 0.388]}
@@ -80,6 +86,7 @@ export default function Cookie(props: {
             scale={[-2.51, -0.32, -1.929]}
           />
           <mesh
+            //@ts-ignore
             geometry={nodes.Icosphere005.geometry}
             material={materials["Material.005"]}
             position={[1.856, 0.306, -0.483]}
@@ -87,6 +94,7 @@ export default function Cookie(props: {
             scale={[0.795, 0.372, 0.511]}
           />
           <mesh
+            //@ts-ignore
             geometry={nodes.Icosphere006.geometry}
             material={materials["Material.006"]}
             position={[1.856, 0.22, 1.312]}
@@ -94,6 +102,7 @@ export default function Cookie(props: {
             scale={[0.684, 0.372, 0.551]}
           />
           <mesh
+            //@ts-ignore
             geometry={nodes.Icosphere007.geometry}
             material={materials["Material.007"]}
             position={[-2.582, 0.37, -0.759]}
