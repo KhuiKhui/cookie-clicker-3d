@@ -10,10 +10,11 @@ import { a } from "@react-spring/three";
 import Spline from "@splinetool/react-spline";
 
 function Cookie(props: { cookies: number; setCookies: Function }) {
-  const cookieRef = useRef();
+  const cookieRef = useRef(0);
   function handleClick(e: any): void {
     if (e.target.name === "cookie") {
-      props.setCookies(props.cookies + 1);
+      cookieRef.current = cookieRef.current + 1;
+      props.setCookies(cookieRef.current);
     }
   }
   // function onLoad(spline: any) {
