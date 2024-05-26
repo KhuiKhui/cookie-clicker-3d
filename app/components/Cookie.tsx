@@ -114,3 +114,5 @@ export default function Cookie(props: {
     </Canvas>
   );
 }
+
+useGLTF.preload("/3d/cookie.glb");
