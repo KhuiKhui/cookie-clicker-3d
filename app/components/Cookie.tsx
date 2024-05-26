@@ -5,14 +5,10 @@ import { useRef } from "react";
 
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Suspense } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+
 import { a } from "@react-spring/three";
 
-export default function Cookie(props: {
-  cookies: number;
-  setCookies: Function;
-}) {
+function Cookie(props: { cookies: number; setCookies: Function }) {
   const cookieRef = useRef();
   function handleClick(): void {
     props.setCookies(props.cookies + 1);
@@ -116,3 +112,4 @@ export default function Cookie(props: {
 }
 
 useGLTF.preload("/3d/cookie.glb");
+export default Cookie;
