@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
 import UI from "./components/UI";
 import Cookie from "./components/Cookie";

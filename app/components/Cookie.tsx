@@ -21,7 +21,7 @@ function Cookie(props: { cookies: number; setCookies: Function }) {
       id="cookie"
       className="fixed cursor-pointer"
     >
-      <Suspense fallback={null}>
+      <Suspense>
         <directionalLight />
         <ambientLight />
         <pointLight />
