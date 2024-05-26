@@ -21,7 +21,7 @@ function Cookie(props: { cookies: number; setCookies: Function }) {
       id="cookie"
       className="fixed cursor-pointer"
     >
-      <Suspense>
+      <Suspense fallback={true}>
         <directionalLight />
         <ambientLight />
         <pointLight />
@@ -111,5 +111,4 @@ function Cookie(props: { cookies: number; setCookies: Function }) {
   );
 }
 
-useGLTF.preload("/3d/cookie.glb");
 export default Cookie;
