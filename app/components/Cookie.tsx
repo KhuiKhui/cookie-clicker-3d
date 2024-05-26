@@ -11,7 +11,7 @@ import Spline from "@splinetool/react-spline";
 
 function Cookie(props: { cookies: number; setCookies: Function }) {
   const cookieRef = useRef();
-  function handleClick(e): void {
+  function handleClick(e: any): void {
     if (e.target.name === "cookie") {
       props.setCookies(props.cookies + 1);
     }
